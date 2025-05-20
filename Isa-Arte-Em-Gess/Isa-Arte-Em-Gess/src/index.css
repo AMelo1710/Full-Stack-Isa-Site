@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 33% 97%;
+    --foreground: 20 14% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 4%;
+
+    --primary: 24 13% 49%;
+    --primary-foreground: 60 9% 98%;
+
+    --secondary: 60 9% 98%;
+    --secondary-foreground: 24 9% 10%;
+
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9% 98%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 24 5.4% 63.9%;
+
+    --radius: 0.5rem;
+    
+    /* Custom colors */
+    --terracotta: 14 82% 46%;
+    --terracotta-dark: 14 92% 36%;
+    --olive: 60 25% 40%;
+    --beige-light: 36 33% 97%;
+    --beige: 36 20% 85%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-beige-light text-foreground font-sans text-base;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+  
+  p, a, button, input, select, textarea, li, span {
+    @apply font-sans text-base;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-md transition-all duration-300 font-medium;
+  }
+  
+  .btn-primary {
+    @apply bg-terracotta text-white hover:bg-terracotta-dark;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-olive text-olive hover:bg-olive hover:text-white;
+  }
+}
+
+@layer utilities {
+  .bg-terracotta {
+    background-color: hsl(14, 82%, 46%);
+  }
+
+  .bg-terracotta-dark {
+    background-color: hsl(14, 92%, 36%);
+  }
+
+  .text-terracotta {
+    color: hsl(14, 82%, 46%);
+  }
+
+  .hover\:bg-terracotta-dark:hover {
+    background-color: hsl(14, 92%, 36%);
+  }
+
+  .hover\:text-terracotta-dark:hover {
+    color: hsl(14, 92%, 36%);
+  }
+
+  .fill-terracotta {
+    fill: hsl(14, 82%, 46%);
+  }
+}
